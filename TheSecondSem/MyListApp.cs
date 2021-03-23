@@ -180,7 +180,7 @@ namespace TheSecondSem
                 var elem2 = new Elem { Info = lst2.First.Info, Next = lst2.First.Next };
                 while(elem1 != null && elem2 != null)
                 {
-                    if (elem1.Info < elem2.Info) { lst.AddLast(lst1.First.Info); elem1 = elem1.Next; }
+                    if (elem1.Info < elem2.Info) { lst.AddLast(elem1.Info); elem1 = elem1.Next; }
                     else if (elem1.Info == elem2.Info) { lst.AddLast(elem1.Info); elem1 = elem1.Next; elem2 = elem2.Next; }
                     else { lst.AddLast(elem2.Info); elem2 = elem2.Next; }
                 }
@@ -203,7 +203,7 @@ namespace TheSecondSem
 
                     else if (elem1.Info == elem2.Info) // тут проверяем на равность
                     {
-                        lst.AddLast(lst2.First.Info);
+                        lst.AddLast(elem2.Info);
                         elem2 = elem2.Next;
                         elem1 = elem1.Next;
                     }
