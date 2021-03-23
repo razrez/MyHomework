@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("MYDNF")]
+[assembly: AssemblyTitle("TheSecondSem")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MYDNF")]
+[assembly: AssemblyProduct("TheSecondSem")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
-[assembly: Guid("62c1fe18-fc04-4c64-a003-633f6ca50cba")]
+[assembly: Guid("cccbe74d-0ae7-4787-93d6-dcfd0cedfeb5")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

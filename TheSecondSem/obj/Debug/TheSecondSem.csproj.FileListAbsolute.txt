@@ -1,0 +1,7 @@
+C:\Users\sharp\source\repos\TheSecondSem\bin\Debug\TheSecondSem.exe.config
+C:\Users\sharp\source\repos\TheSecondSem\bin\Debug\TheSecondSem.exe
+C:\Users\sharp\source\repos\TheSecondSem\bin\Debug\TheSecondSem.pdb
+C:\Users\sharp\source\repos\TheSecondSem\obj\Debug\TheSecondSem.csprojAssemblyReference.cache
+C:\Users\sharp\source\repos\TheSecondSem\obj\Debug\TheSecondSem.csproj.CoreCompileInputs.cache
+C:\Users\sharp\source\repos\TheSecondSem\obj\Debug\TheSecondSem.exe
+C:\Users\sharp\source\repos\TheSecondSem\obj\Debug\TheSecondSem.pdb
