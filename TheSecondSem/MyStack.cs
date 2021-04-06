@@ -7,45 +7,74 @@ using static TheSecondSem.MyListApp;
 
 namespace TheSecondSem
 {
-    public class MyStack
+    public class MyStack<T> //Stack on arrays
     {
-        private Elem Top { get; set; }
+        private T[] items; //elems of Stack
+        private int count; //num of elems
+        const int n = 10; //default size 
 
-        public void Push(int x)
+        public MyStack() { items = new T[n]; }
+        public MyStack(int length)
         {
-            var nEl = new Elem();
-            nEl.Info = x;
-            nEl.Next = Top;
-            Top = nEl;
+            items = new T[length];
+        }//choose size
+
+        // пуст ли стек
+        public bool IsEmpty
+        {
+            get { return count == 0; }
+        }
+        // размер стека
+        public int Count
+        {
+            get { return count; }
         }
 
-        public int Pop()
+        public void Push(T x)
         {
-            var x = Top.Info;
-            Top = Top.Next;
-            return x;
+            if (count == items.Length)
+                Resize(items.Length + 10);
+            items[count++] = x;
         }
 
-
-        public bool IsEmpty()
+        public T Pop()
         {
-            return Top == null;
+            if (IsEmpty) 
+                throw new InvalidOperationException("Stack is empty");
+
+            T top = items[--count]; //сначала присвоение, потом вычетание
+            items[count] = default(T); //сброс ссылки 
+
+            if (count > 0 && count < items.Length - 10)
+                Resize(items.Length - 10);
+
+            return top;
+        }
+
+        public T Peek()
+        {
+            return items[count - 1];
+        }
+
+        private void Resize(int max)
+        {
+            T[] tempItems = new T[max];
+            for (int i = 0; i < count; i++)
+                tempItems[i] = items[i];
+            items = tempItems;
         }
 
         public override string ToString()
         {
             var sb = new StringBuilder();
-            var el = Top;
-            while (el != null)
+            //out from the Top
+            for(int i = 0; i <= Count - 1; i++)
             {
-                sb.Append($"{el.Info} ->");
-                el = el.Next;
+                sb.Append($"{items[i]} -> ");
             }
-            sb.Append("null");
+            sb.Append("...");
             return sb.ToString();
         }
-
-
 
     }
 }

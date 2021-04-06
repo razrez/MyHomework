@@ -11,7 +11,7 @@ namespace TheSecondSem
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
+            /*Random rnd = new Random();
             MySortedList glist1 = new MySortedList();
             MySortedList glist2 = new MySortedList();
 
@@ -83,7 +83,9 @@ namespace TheSecondSem
             Console.WriteLine(list4);
             Console.WriteLine($"list3 & list4 DIFFERENCE ==> {MySortedList.FindDiffrence(list3, list4)}");
             Console.WriteLine(list3);
-            Console.WriteLine(list4);
+            Console.WriteLine(list4);*/
+
+
             /*MySortedList lst1 = new MySortedList();
             MySortedList lst2 = new MySortedList();
             for (int i = 20; i >= 10; i -= 2)
@@ -115,7 +117,35 @@ namespace TheSecondSem
 
             Console.WriteLine(MyList.ToUnite(lst1, lst));
             Console.WriteLine("///////////////// both are united and sorted /////////////////");*/
-            Console.ReadKey(); 
+
+
+            MyStack<string> people = new MyStack<string>();
+            people.Push("Tom");
+            people.Push("Bob");
+            people.Push("Sam");
+            people.Push("Abu-Bandit");
+            Console.WriteLine($"Stack: {people}");
+            Console.Write("pop:");
+            while (!people.IsEmpty)
+            {
+                Console.WriteLine($"\t{people.Pop()}");
+            }
+            Console.WriteLine($"Stack: {people}");
+
+
+            Console.WriteLine();
+            Console.Write("Queue: ");
+            MyQueue<string> queue = new MyQueue<string>();
+            queue.Enqueue("Kate");
+            queue.Enqueue("Sam");
+            queue.Enqueue("Alice");
+            queue.Enqueue("Tom");
+
+            Console.WriteLine($"Queue: {queue}");
+            string firstItem = queue.Dequeue();
+            Console.WriteLine($"Dequeue: {firstItem}");
+            Console.WriteLine($"Queue: {queue}");
+            Console.ReadKey();
         }
     }
 }

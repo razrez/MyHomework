@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,57 +8,111 @@ using static TheSecondSem.MyListApp;
 
 namespace TheSecondSem
 {
-    public class MyQueue
+    public class Node<T>
     {
-        private Elem First { get; set; }
-        private Elem Last { get; set; }
-
-        public void Push(int x)
+        public Node(T data)
         {
-            var newEl = new Elem();
-            newEl.Info = x;
+            Data = data;
+        }
+        public T Data { get; set; }
+        public Node<T> Next { get; set; }
+    }
 
-            if (IsEmpty())
-            {
-                First = Last = newEl;
-            }
+    public class MyQueue<T> : IEnumerable<T>
+    {
+        Node<T> head; // головной/первый элемент
+        Node<T> tail; // последний/хвостовой элемент
+        int count;
+        // добавление в очередь
+        public void Enqueue(T data)
+        {
+            Node<T> node = new Node<T>(data);
+            Node<T> tempNode = tail;
+            tail = node;
+            if (count == 0)
+                head = tail;
             else
+                tempNode.Next = tail;
+            count++;
+        }
+        // удаление из очереди
+        public T Dequeue()
+        {
+            if (count == 0)
+                throw new InvalidOperationException();
+            T output = head.Data;
+            head = head.Next;
+            count--;
+            return output;
+        }
+        // получаем первый элемент
+        public T First
+        {
+            get
             {
-                Last.Next = newEl;
-                Last = newEl;
+                if (IsEmpty)
+                    throw new InvalidOperationException();
+                return head.Data;
             }
+        }
+        // получаем последний элемент
+        public T Last
+        {
+            get
+            {
+                if (IsEmpty)
+                    throw new InvalidOperationException();
+                return tail.Data;
+            }
+        }
+        public int Count { get { return count; } }
+        public bool IsEmpty { get { return count == 0; } }
 
+        public void Clear()
+        {
+            head = null;
+            tail = null;
+            count = 0;
         }
 
-        public int Pop()
+        public bool Contains(T data)
         {
-            var x = First.Info;
-            First = First.Next;
-            if (First == null)
-                Last = null;
-            return x;
+            Node<T> current = head;
+            while (current != null)
+            {
+                if (current.Data.Equals(data))
+                    return true;
+                current = current.Next;
+            }
+            return false;
         }
 
-
-        public bool IsEmpty()
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            return First == null;
+            return ((IEnumerable)this).GetEnumerator();
+        }
+
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        {
+            Node<T> current = head;
+            while (current != null)
+            {
+                yield return current.Data;
+                current = current.Next;
+            }
         }
 
         public override string ToString()
         {
             var sb = new StringBuilder();
-            var el = First;
+            var el = head;
             while (el != null)
             {
-                sb.Append($"{el.Info} ->");
+                sb.Append($"{el.Data} -> ");
                 el = el.Next;
             }
-            sb.Append("null");
+            sb.Append("...");
             return sb.ToString();
         }
-
-
-
     }
 }
