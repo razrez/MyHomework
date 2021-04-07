@@ -145,7 +145,47 @@ namespace TheSecondSem
             string firstItem = queue.Dequeue();
             Console.WriteLine($"Dequeue: {firstItem}");
             Console.WriteLine($"Queue: {queue}");
+
+            Console.WriteLine("_______________________");
+            Console.WriteLine(IsCorrectString("(([])[])"));
+            Console.WriteLine(IsCorrectString("((][])"));
+            Console.WriteLine(IsCorrectString("((("));
+            Console.WriteLine(IsCorrectString("(x)"));
+
+            Console.WriteLine("_______________________");
+            OutPut(new int[] {1, 2, 3, 4, 5, 6, 7});
             Console.ReadKey();
+        }
+
+        public static void OutPut(int[] arr)
+        {
+            var queue0 = new MyQueue<int>();
+            var queue1 = new MyQueue<int>();
+            foreach(var num in arr)
+            {
+                if (num % 2 == 0) queue0.Enqueue(num);
+                else queue1.Enqueue(num);
+            }
+            Console.WriteLine(queue0);
+            Console.WriteLine(queue1);
+        }
+
+        public static bool IsCorrectString(string str)
+        {
+            var pairs = new Dictionary<char, char>();
+            pairs.Add('(', ')');
+            pairs.Add('[', ']');
+            var stack = new MyStack<char>();
+            foreach (var e in str)
+            {
+                if (pairs.ContainsKey(e)) stack.Push(e);
+                else if (pairs.ContainsValue(e))
+                {
+                    if (stack.Count == 0 || pairs[stack.Pop()] != e) return false;
+                }
+                else return false;
+            }
+            return stack.Count == 0;
         }
     }
 }
