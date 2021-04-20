@@ -1,0 +1,7 @@
+C:\Users\sharp\source\repos\LinqTasks\bin\Debug\LinqTasks.exe.config
+C:\Users\sharp\source\repos\LinqTasks\bin\Debug\LinqTasks.exe
+C:\Users\sharp\source\repos\LinqTasks\bin\Debug\LinqTasks.pdb
+C:\Users\sharp\source\repos\LinqTasks\obj\Debug\LinqTasks.csprojAssemblyReference.cache
+C:\Users\sharp\source\repos\LinqTasks\obj\Debug\LinqTasks.csproj.CoreCompileInputs.cache
+C:\Users\sharp\source\repos\LinqTasks\obj\Debug\LinqTasks.exe
+C:\Users\sharp\source\repos\LinqTasks\obj\Debug\LinqTasks.pdb
