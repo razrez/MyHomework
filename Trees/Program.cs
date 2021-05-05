@@ -10,43 +10,25 @@ namespace TreeApp
     {
         static void Main(string[] args)
         {
-            //   Tree<int> tree = new Tree<int>("(100,4,)", s => int.Parse(s));
+            var testree = new SimpleTree<int>("(11,(9,18,10),(13,12,15))", s => int.Parse(s));
+            Console.WriteLine($"Поуровневый обход и поиск минимума {testree}:");
+            Console.WriteLine(string.Join("\t", testree.TraverseLevelOrder()));
+            Console.WriteLine($"MIN leaf = {testree.MinLeaf()}");
+            Console.ReadKey();
 
-            Tree<int> tree = new Tree<int>("(-10,(23,46,(5,8,)),(13,36,7))", s => int.Parse(s));
-
-            Tree<string> arTree = new Tree<string>("(/,(*,(+,3,13), 7),6)", s => s);
-
-            //Tree<string> arTree = new Tree<string>("(*, (+, 4, (/, 8, 4)), (-, 6, 7))", s => s);
-            // Tree<double> tree = new Tree<double>("(-10,4;(23,4;46,3;(5,2;8;));(13;36;7))", s => double.Parse(s));
-
-            //tree.Root = new Elem<int>()
-            //{
-            //    Info = 5,
-            //    Left = new Elem<int>() 
-            //    { 
-            //        Info = 4,
-            //        Left = new Elem<int>() { Info = 10 },
-            //        Right = new Elem<int>() { Info = 8 }
-            //    },
-            //    Right = new Elem<int>()
-            //    {
-            //        Info = 3,
-            //        Left = new Elem<int>() { Info = 66 }
-            //    }
-            //};
-
-
+            SimpleTree<int> tree = new SimpleTree<int>("(-10,(23,46,(5,8,)),(13,36,7))", s => int.Parse(s));
+            SimpleTree<string> arTree = new SimpleTree<string>("(/,(*,(+,3,13), 7),6)", s => s);
 
             Console.WriteLine(arTree);
             Console.WriteLine(arTree.Calc());
-
             Console.WriteLine(tree.MyOper((a, b) => a + b, 0));
-
             Console.WriteLine(tree.MyOper((a, b) => a > b ? a : b, int.MinValue));
 
 
+            ///////////////////////////////////////////////////////////////
+            Console.WriteLine("\n******************************************\n");
+            ///////////////////////////////////////////////////////////////
 
-            Console.WriteLine("******************************************");
 
             SearchTree<int> st = new SearchTree<int>();
             st.AddElem(10);
@@ -56,11 +38,16 @@ namespace TreeApp
             st.AddElem(8);
             st.AddElem(12);
             st.AddElem(20);
-
             Console.WriteLine(st);
 
+            //st.Delete(5);
+            //st.Delete(91);
+            //st.Delete(10);
+            st.Delete(8);
+            st.Delete(10);
 
-            Console.WriteLine(st.Contains(11));
+            Console.WriteLine(st);
+            Console.ReadKey();
         }
     }
 }

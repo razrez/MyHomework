@@ -1,0 +1,7 @@
+C:\Users\sharp\source\repos\TreeApp\bin\Debug\TreeApp.exe.config
+C:\Users\sharp\source\repos\TreeApp\bin\Debug\TreeApp.exe
+C:\Users\sharp\source\repos\TreeApp\bin\Debug\TreeApp.pdb
+C:\Users\sharp\source\repos\TreeApp\obj\Debug\TreeApp.csprojAssemblyReference.cache
+C:\Users\sharp\source\repos\TreeApp\obj\Debug\TreeApp.csproj.CoreCompileInputs.cache
+C:\Users\sharp\source\repos\TreeApp\obj\Debug\TreeApp.exe
+C:\Users\sharp\source\repos\TreeApp\obj\Debug\TreeApp.pdb
