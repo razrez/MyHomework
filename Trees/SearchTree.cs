@@ -112,10 +112,9 @@ namespace TreeApp
                 DelOneSon(elem, parent);
 
             //2 сына
+            //беру максимум в левом поддереве, если у правого нет детей
             if (elem.Left != null && elem.Right != null)
             {
-                //можно брать максимум в левом поддереве или максимум в правом
-                //хочю брать в максимум в левом, потому что впадлу 2-ой метод писать
                 if (elem.Right != null & elem.Right.Left == null && elem.Right.Right == null)
                 {
                     elem.Info = elem.Right.Info;
