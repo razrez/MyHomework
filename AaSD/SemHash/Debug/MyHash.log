@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\Users\sharp\source\repos\MyHash\Source.cpp(26,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  MyHash.vcxproj -> C:\Users\sharp\source\repos\MyHash\Debug\MyHash.exe
