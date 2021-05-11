@@ -1,0 +1,9 @@
+﻿  SplayTree.cpp
+C:\Users\sharp\source\repos\SplayTree\SplayTree.cpp(178,12): warning C4099: node: имя типа, ранее отображенное с помощью "class", теперь отображено с помощью "struct"
+C:\Users\sharp\source\repos\SplayTree\SplayTree.cpp(16): message : см. объявление "node"
+C:\Users\sharp\source\repos\SplayTree\SplayTree.cpp(178,36): warning C4099: node: имя типа, ранее отображенное с помощью "class", теперь отображено с помощью "struct"
+C:\Users\sharp\source\repos\SplayTree\SplayTree.cpp(178): message : см. объявление "node"
+C:\Users\sharp\source\repos\SplayTree\SplayTree.cpp(180,16): warning C4099: node: имя типа, ранее отображенное с помощью "class", теперь отображено с помощью "struct"
+C:\Users\sharp\source\repos\SplayTree\SplayTree.cpp(178): message : см. объявление "node"
+C:\Users\sharp\source\repos\SplayTree\SplayTree.cpp(231,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  SplayTree.vcxproj -> C:\Users\sharp\source\repos\SplayTree\Debug\SplayTree.exe
