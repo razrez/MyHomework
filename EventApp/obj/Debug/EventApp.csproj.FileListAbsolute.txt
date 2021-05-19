@@ -1,0 +1,7 @@
+C:\Users\sharp\source\repos\EventApp\bin\Debug\EventApp.exe.config
+C:\Users\sharp\source\repos\EventApp\bin\Debug\EventApp.exe
+C:\Users\sharp\source\repos\EventApp\bin\Debug\EventApp.pdb
+C:\Users\sharp\source\repos\EventApp\obj\Debug\EventApp.csprojAssemblyReference.cache
+C:\Users\sharp\source\repos\EventApp\obj\Debug\EventApp.csproj.CoreCompileInputs.cache
+C:\Users\sharp\source\repos\EventApp\obj\Debug\EventApp.exe
+C:\Users\sharp\source\repos\EventApp\obj\Debug\EventApp.pdb
