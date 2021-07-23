@@ -36,8 +36,7 @@ end
 #creating objs
 seq = Sequense.new(5)
 seq.print()
-#find 4-th elem of sequense
-puts seq.find(4)
+puts "\nfind 4-th elem of sequense: #{seq.find(4)} \n\n\n"
 
 #testing class
 require 'test/unit'
