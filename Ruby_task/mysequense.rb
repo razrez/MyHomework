@@ -36,6 +36,7 @@ end
 #creating objs
 seq = Sequense.new(5)
 seq.print()
+#find 4-th elem of sequense
 puts seq.find(4)
 
 #testing class
