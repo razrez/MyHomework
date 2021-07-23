@@ -33,9 +33,10 @@ class Sequense
 
 end
 
-seq = Sequense.new(1)
+#creating objs
+seq = Sequense.new(5)
 seq.print()
-puts seq.find(1)
+puts seq.find(4)
 
 #testing class
 require 'test/unit'
