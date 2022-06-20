@@ -1,7 +1,0 @@
-C:\Users\sharp\source\repos\PrioirityQueue\bin\Debug\PrioirityQueue.exe.config
-C:\Users\sharp\source\repos\PrioirityQueue\bin\Debug\PrioirityQueue.exe
-C:\Users\sharp\source\repos\PrioirityQueue\bin\Debug\PrioirityQueue.pdb
-C:\Users\sharp\source\repos\PrioirityQueue\obj\Debug\PrioirityQueue.csprojAssemblyReference.cache
-C:\Users\sharp\source\repos\PrioirityQueue\obj\Debug\PrioirityQueue.csproj.CoreCompileInputs.cache
-C:\Users\sharp\source\repos\PrioirityQueue\obj\Debug\PrioirityQueue.exe
-C:\Users\sharp\source\repos\PrioirityQueue\obj\Debug\PrioirityQueue.pdb
