@@ -1,3 +1,0 @@
-﻿  Source.cpp
-C:\Users\sharp\source\repos\CombSorter\Source.cpp(46,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  CombSorter.vcxproj -> C:\Users\sharp\source\repos\CombSorter\Debug\CombSorter.exe
